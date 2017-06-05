@@ -167,7 +167,7 @@ POST https://api.wovn.io/v0/translation
 * token: 123456
 * lang_code: ja
 * url_pattern: path
-* body: <html><head><title>Test Title</title></head><body><p>Test text</p></body></html>
+* body: ```<html><head><title>Test Title</title></head><body><p>Test text</p></body></html>```
 
 ```json
 Status Code: 200
