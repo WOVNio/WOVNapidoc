@@ -176,6 +176,6 @@ Content-Type: application/json
 
 ```javascript
 {
-  "body": "<html><head><title>テストタイトル</title></head><body><p>テストテキスト</p></body></html>"
+  "body": "<html><head><script src=\"//j.wovn.io/1\" async=\"true\" data-wovnio=\"key=123456&amp;backend=true&amp;currentLang=ja&amp;defaultLang=en&amp;urlPattern=path&amp;langCodeAliases=[]&amp;version=api\"></script><title>テストタイトル</title></head><body><p>テストテキスト</p></body></html>"
 }
 ```
