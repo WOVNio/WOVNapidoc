@@ -159,6 +159,7 @@ lang_code  | body       | Language to translate the page into                   
 url_pattern| body       | URL pattern used on the backend (path, query, subdomain)  | yes      | string
 body       | body       | HTML content of the page MUST BE URL ENCODED              | yes      | string
 
+
 #### Sample responses
 
 POST https://api.wovn.io/v0/translation
