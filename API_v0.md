@@ -144,3 +144,39 @@ Content-Type: application/json
   ]
 }
 ```
+
+### (ALPHA) POST https://api.wovn.io/v0/translation
+
+Translate HTML content of a page through the translation API
+
+#### Parameters
+
+Name       | Located in | Description                                               | Required | Schema
+---------- | ---------- | --------------------------------------------------------- | -------- | ------
+url        | body       | URL of the page as created in the WOVN.io website         | yes      | string
+token      | body       | Domain token of the project (or User token)               | yes      | string
+lang_code  | body       | Language to translate the page into                       | yes      | string
+url_pattern| body       | URL pattern used on the backend (path, query, subdomain)  | yes      | string
+body       | body       | HTML content of the page MUST BE URL ENCODED              | yes      | string
+
+#### Sample responses
+
+POST https://api.wovn.io/v0/translation
+
+* url: http://wovn.io
+* token: 123456
+* lang_code: ja
+* url_pattern: path
+* body: ```%3Chtml%3E%3Chead%3E%3Ctitle%3ETest+Title%3C%2Ftitle%3E%3C%2Fhead%3E%3Cbody%3E%3Cp%3ETest+text%3C%2Fp%3E%3C%2Fbody%3E%3C%2Fhtml%3E```
+(body is url encoded)
+
+```json
+Status Code: 200
+Content-Type: application/json
+```
+
+```javascript
+{
+  "body": "<html><head><script src=\"//j.wovn.io/1\" async=\"true\" data-wovnio=\"key=123456&amp;backend=true&amp;currentLang=ja&amp;defaultLang=en&amp;urlPattern=path&amp;langCodeAliases=[]&amp;version=api\"></script><title>テストタイトル</title></head><body><p>テストテキスト</p></body></html>"
+}
+```
