@@ -157,7 +157,7 @@ url        | body       | URL of the page as created in the WOVN.io website     
 token      | body       | Domain token of the project (or User token)               | yes      | string
 lang_code  | body       | Language to translate the page into                       | yes      | string
 url_pattern| body       | URL pattern used on the backend (path, query, subdomain)  | yes      | string
-body       | body       | HTML content of the page MUST BE URL ENCODED              | yes      | string
+body       | body       | HTML content of the page                                  | yes      | string
 
 
 #### Sample responses
@@ -168,8 +168,7 @@ POST https://api.wovn.io/v0/translation
 * token: 123456
 * lang_code: ja
 * url_pattern: path
-* body: ```%3Chtml%3E%3Chead%3E%3Ctitle%3ETest+Title%3C%2Ftitle%3E%3C%2Fhead%3E%3Cbody%3E%3Cp%3ETest+text%3C%2Fp%3E%3C%2Fbody%3E%3C%2Fhtml%3E```
-(body is url encoded)
+* body: ```<html><head><title>テストタイトル</title></head><body><p>テストテキスト</p></body></html>```
 
 ```json
 Status Code: 200
